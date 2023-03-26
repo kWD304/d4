@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: cadetblue;
+            transition: 1s;
+
+        }
+        .btns {
+            position: relative;
+            top: 60px;
+            width: 700px;
+            margin: auto;
+            text-align: center;
+            transition: .3s;
+        }
+        .bgcolor--blue {
+            background-color: skyblue;
+        }
+        .bgcolor--gray {
+            background-color: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <button class="btn_toggle">배경색상변경_토글버튼</button>
+        <button class="btn_bggray">배경색상변경_그레이</button>
+        <button class="btn_reset">배경색상_리셋</button>
+    </div>
+    <script>
+
+
+        const btnToggle = document.querySelector('.btn_toggle')
+        btnToggle.addEventListener('click', function () {
+            document.body.classList.toggle('bgcolor--blue')
+        })
+        const btnBgGray = document.querySelector('.btn_bggray')
+        btnBgGray.addEventListener('click', function (){
+            document.body.classList.add('bgcolor--gray')
+        })
+        const btnReset = document.querySelector('.btn_reset')
+        btnReset.addEventListener('click', function (){
+            document.body.classList.remove('bgcolor--gray')
+            document.body.classList.remove('bgcolor--blue')
+        })
+    </script>
+
+</body>
+</html>
